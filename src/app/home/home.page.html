@@ -1,0 +1,101 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Weather Application
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main">
+    <span class="city">Dublin</span>
+    <span class="date">3:53pm</span> <!--<span *ngFor="let weather of weather">{{ weather.timezone }}</span>  (Attempt at inputing dynamic data)--> 
+
+    <div class="icon">
+      <ion-icon name="cloud-outline"></ion-icon>
+    </div>
+
+    <span class="description">Cloudy</span>
+    <span class="temperature">18°</span>
+
+  </div>
+
+  <!-- 7 Day forecast grid -->
+  <ion-grid>
+    <!--Day Row -->
+    <ion-row>
+      <ion-col class="day">Tue</ion-col>
+      <ion-col class="day">Wed</ion-col>
+      <ion-col class="day">Thu</ion-col>
+      <ion-col class="day">Fri</ion-col>
+      <ion-col class="day">Sat</ion-col>
+      <ion-col class="day">Sun</ion-col>
+      <ion-col class="day">Mon</ion-col>
+    </ion-row>
+
+    <!-- Chances of precipitation-->
+    <ion-row>
+      <ion-col class="precipitation">60%</ion-col>
+      <ion-col class="precipitation">20%</ion-col>
+      <ion-col class="precipitation">-</ion-col>
+      <ion-col class="precipitation">-</ion-col>
+      <ion-col class="precipitation">60%</ion-col>
+      <ion-col class="precipitation">-</ion-col>
+      <ion-col class="precipitation">-</ion-col>
+    </ion-row>
+
+    <!-- Weather icon-->
+
+    <ion-row>
+      <ion-col class="icon-sm"><img src="https://icon-library.com/images/cloudy-icon/cloudy-icon-21.jpg"></ion-col>
+      <ion-col class="icon-sm"><img src="https://icon-library.com/images/cloudy-icon/cloudy-icon-21.jpg"></ion-col>
+      <ion-col class="icon-sm"><img src="https://icon-library.com/images/cloudy-icon/cloudy-icon-21.jpg"></ion-col>
+      <ion-col class="icon-sm"><img src="https://icon-library.com/images/cloudy-icon/cloudy-icon-21.jpg"></ion-col>
+      <ion-col class="icon-sm"><img src="https://icon-library.com/images/cloudy-icon/cloudy-icon-21.jpg"></ion-col>
+      <ion-col class="icon-sm"><img src="https://icon-library.com/images/cloudy-icon/cloudy-icon-21.jpg"></ion-col>
+      <ion-col class="icon-sm"><img src="https://icon-library.com/images/cloudy-icon/cloudy-icon-21.jpg"></ion-col>
+    </ion-row>
+
+    <!-- Max Temperature -->
+    <ion-row>
+      <ion-col class="hi-sm">25°</ion-col>
+      <ion-col class="hi-sm">27°</ion-col>
+      <ion-col class="hi-sm">25°</ion-col>
+      <ion-col class="hi-sm">26°</ion-col>
+      <ion-col class="hi-sm">22°</ion-col>
+      <ion-col class="hi-sm">27°</ion-col>
+      <ion-col class="hi-sm">31°</ion-col>
+    </ion-row>
+
+    <!-- Min Temperature -->
+    <ion-row>
+      <ion-col class="lo-sm">15°</ion-col>
+      <ion-col class="lo-sm">16°</ion-col>
+      <ion-col class="lo-sm">17°</ion-col>
+      <ion-col class="lo-sm">13°</ion-col>
+      <ion-col class="lo-sm">16°</ion-col>
+      <ion-col class="lo-sm">12°</ion-col>
+      <ion-col class="lo-sm">21°</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Ion tabs for nice looking UI -->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="calendar">
+        <ion-icon name="calendar" [routerLink]="['/calendar']" routerDirection="forward"></ion-icon>
+        <ion-label>Calendar</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="location">
+        <ion-icon name="compass-outline" name="compass-outline" [routerLink]="['/location']" routerDirection="forward"></ion-icon>
+        <ion-label>Location</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="status">
+        <ion-icon name="happy-outline" [routerLink]="['/status']" routerDirection="forward"></ion-icon>
+        <ion-label>Status</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

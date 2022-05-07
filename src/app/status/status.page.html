@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Status Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-title> My Status is {{myStatus}}</ion-title>
+    <ion-radio-group [(ngModel)]="myStatus">
+
+      <ion-list-header>
+        <ion-label>Status</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Happy</ion-label>
+        <ion-radio slot="start" value="happy"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Sad</ion-label>
+        <ion-radio slot="start" value="sad"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Energetic</ion-label>
+        <ion-radio slot="start" value="energetic"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Lazy</ion-label>
+        <ion-radio slot="start" value="lazy"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)="SaveStatus()">Save</ion-button>
+
+<!-- <ion-tabs>                  //When adding the Home tab button none of the Status checks work, so to allow them to work I have commented out the home tab button
+    <ion-tab-bar slot="bottom">   //If you wish to see how the home tab button operates just uncomment this code, there is also another home button in the calendar page
+      <ion-tab-button tab="home">
+        <ion-icon name="home" [routerLink]="['/home']" routerDirection="back"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs> -->
+
+  
+</ion-content>
